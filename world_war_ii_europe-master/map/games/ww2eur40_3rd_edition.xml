@@ -3078,21 +3078,21 @@
     </attachment>
     <!-- Tech Ability Attachment -->
     <attachment name="techAbilityAttachment" attachTo="superSub" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
-      <option name="attackBonus" value="1:submarine"/>
+      <option name="attackBonus" value="2:submarine"/>
     </attachment>
     <attachment name="techAbilityAttachment" attachTo="jetPower" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
-      <option name="attackBonus" value="1:fighter"/>
-      <option name="airAttackBonus" value="1:fighter"/>
-      <option name="airDefenseBonus" value="1:fighter"/>
+      <option name="attackBonus" value="2:fighter"/>
+      <option name="airAttackBonus" value="2:fighter"/>
+      <option name="airDefenseBonus" value="2:fighter"/>
     </attachment>
     <!-- shipyards can either be done with triggers, or the old way (old way only works if all nations have the same production frontier, and it requires a special shipyard frontier) -->
     <attachment name="techAbilityAttachment" attachTo="aARadar" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
-      <option name="radarBonus" value="1:aaGun"/>
-      <option name="radarBonus" value="1:airfield"/>
-      <option name="radarBonus" value="1:harbour"/>
-      <option name="radarBonus" value="1:factory_minor"/>
-      <option name="radarBonus" value="1:factory_upgrade"/>
-      <option name="radarBonus" value="1:factory_major"/>
+      <option name="radarBonus" value="2:aaGun"/>
+      <option name="radarBonus" value="2:airfield"/>
+      <option name="radarBonus" value="2:harbour"/>
+      <option name="radarBonus" value="2:factory_minor"/>
+      <option name="radarBonus" value="2:factory_upgrade"/>
+      <option name="radarBonus" value="2:factory_major"/>
     </attachment>
     <attachment name="techAbilityAttachment" attachTo="longRangeAir" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
       <option name="movementBonus" value="1:fighter"/>
