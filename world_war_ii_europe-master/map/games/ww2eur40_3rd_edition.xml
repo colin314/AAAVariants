@@ -728,7 +728,6 @@
   </playerList>
   <unitList>
     <unit name="infantry"/>
-    <unit name="russianInfantry"/>
     <unit name="artillery"/>
     <unit name="mech_infantry"/>
     <unit name="armour"/>
@@ -864,14 +863,6 @@
     <productionRule name="buyInfantry">
       <cost resource="PUs" quantity="3"/>
       <result resourceOrUnit="infantry" quantity="1"/>
-    </productionRule>
-    <productionRule name="buyRussianInfantry">
-      <cost resource="PUs" quantity="3"/>
-      <result resourceOrUnit="russianInfantry" quantity="1"/>
-    </productionRule>
-    <productionRule name="buy2RussianInfantry">
-      <cost resource="PUs" quantity="5"/>
-      <result resourceOrUnit="russianInfantry" quantity="2"/>
     </productionRule>
     <productionRule name="buyMech_Infantry">
       <cost resource="PUs" quantity="4"/>
@@ -1137,28 +1128,6 @@
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbour"/>
     </productionFrontier>
-    <productionFrontier name="russianProduction">
-      <frontierRules name="buyRussianInfantry"/>
-      <frontierRules name="buy2RussianInfantry"/>
-      <frontierRules name="buyMech_Infantry"/>
-      <frontierRules name="buyArtillery"/>
-      <frontierRules name="buyArmour"/>
-      <frontierRules name="buyFighter"/>
-      <frontierRules name="buyTactical_Bomber"/>
-      <frontierRules name="buyBomber"/>
-      <frontierRules name="buyTransport"/>
-      <frontierRules name="buySubmarine"/>
-      <frontierRules name="buyCarrier"/>
-      <frontierRules name="buyDestroyer"/>
-      <frontierRules name="buyCruiser"/>
-      <frontierRules name="buyBattleship"/>
-      <frontierRules name="buyAAGun"/>
-      <frontierRules name="buyFactory_Minor"/>
-      <frontierRules name="buyFactory_Upgrade"/>
-      <frontierRules name="buyFactory_Major"/>
-      <frontierRules name="buyAirfield"/>
-      <frontierRules name="buyHarbour"/>
-    </productionFrontier>
     <!--<productionFrontier name="productionIndustrialTechnology">
                         <frontierRules name="buyInfantryIndustrialTechnology"/>
                         <frontierRules name="buyMech_InfantryIndustrialTechnology"/>
@@ -1192,7 +1161,7 @@
     <playerProduction player="French" frontier="production"/>
     <playerProduction player="Germans" frontier="production"/>
     <playerProduction player="Italians" frontier="production"/>
-    <playerProduction player="Russians" frontier="russianProduction"/>
+    <playerProduction player="Russians" frontier="production"/>
     <playerRepair player="Americans" frontier="repair"/>
     <playerRepair player="British" frontier="repair"/>
     <playerRepair player="French" frontier="repair"/>
@@ -1501,18 +1470,6 @@
       <option name="isLandTransportable" value="true"/>
       <option name="attack" value="2"/>
       <option name="defense" value="3"/>
-      <!--<option name="artillerySupportable" value="true"/>-->
-      <option name="isAirTransportable" value="true"/>
-      <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians"/>
-      <option name="canBeGivenByTerritoryTo" value="British"/>
-    </attachment>
-    <!-- Russian Infantry -->
-    <attachment name="unitAttachment" attachTo="russianInfantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-      <option name="movement" value="1"/>
-      <option name="transportCost" value="2"/>
-      <option name="isLandTransportable" value="true"/>
-      <option name="attack" value="1"/>
-      <option name="defense" value="2"/>
       <!--<option name="artillerySupportable" value="true"/>-->
       <option name="isAirTransportable" value="true"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians"/>
@@ -2316,7 +2273,7 @@
     </attachment>
     <!-- Support Attachments -->
     <attachment name="supportAttachmentInfantryAndMechInf" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="infantry:mech_infantry:russianInfantry"/>
+      <option name="unitType" value="infantry:mech_infantry"/>
       <option name="faction" value="allied"/>
       <option name="side" value="offence"/>
       <option name="dice" value="strength"/>
@@ -2327,7 +2284,7 @@
       <option name="players" value="Germans:Russians:Americans:British:French:Italians"/>
     </attachment>
     <attachment name="supportAttachmentInfantryAndMechInf2" attachTo="artillery" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
-      <option name="unitType" value="infantry:mech_infantry:russianInfantry"/>
+      <option name="unitType" value="infantry:mech_infantry"/>
       <option name="faction" value="allied"/>
       <option name="side" value="defence"/>
       <option name="dice" value="strength"/>
@@ -2741,7 +2698,7 @@
       <option name="trigger" value="conditionAttachment_French_1_Liberation_Switch"/>
       <option name="uses" value="1"/>
       <option name="when" value="after:russiansBattle"/>
-      <option name="placement" value="France:infantry:infantry:infantry:infantry:russianInfantry"/>
+      <option name="placement" value="France:infantry:infantry:infantry:infantry"/>
       <!-- the below just prevents the other triggers from ever firing, by setting the condition to be something impossible -->
       <option name="players" value="French"/>
       <option name="playerAttachmentName" value="RulesAttachment" count="conditionAttachment_French_1_Can_Be_Liberated_Switch"/>
@@ -3456,10 +3413,9 @@
       <unitPlacement unitType="battleship" territory="97 Sea Zone" quantity="1" owner="Italians"/>
       <unitPlacement unitType="transport" territory="97 Sea Zone" quantity="1" owner="Italians"/>
       <!-- Russia -->
-      <unitPlacement unitType="russianInfantry" territory="Karelia" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Karelia" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Archangel" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Russia" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Karelia" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Archangel" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="artillery" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="mech_infantry" territory="Russia" quantity="1" owner="Russians"/>
       <unitPlacement unitType="armour" territory="Russia" quantity="1" owner="Russians"/>
@@ -3471,28 +3427,22 @@
       <unitPlacement unitType="armour" territory="Volgograd" quantity="1" owner="Russians"/>
       <unitPlacement unitType="mech_infantry" territory="Volgograd" quantity="1" owner="Russians"/>
       <unitPlacement unitType="factory_minor" territory="Volgograd" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Caucasus" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Caucasus" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Bessarabia" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Bessarabia" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Western Ukraine" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Caucasus" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Bessarabia" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Western Ukraine" quantity="1" owner="Russians"/>
       <unitPlacement unitType="artillery" territory="Western Ukraine" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Eastern Poland" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Eastern Poland" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Baltic States" quantity="3" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Baltic States" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Belarus" quantity="2" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Novgorod" quantity="6" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Novgorod" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Eastern Poland" quantity="2" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Baltic States" quantity="3" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Belarus" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Novgorod" quantity="6" owner="Russians"/>
+      <unitPlacement unitType="artillery" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="fighter" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="aaGun" territory="Novgorod" quantity="2" owner="Russians"/>
       <unitPlacement unitType="airfield" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="harbour" territory="Novgorod" quantity="1" owner="Russians"/>
       <unitPlacement unitType="factory_minor" territory="Novgorod" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Vyborg" quantity="3" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Vyborg" quantity="1" owner="Russians"/>
-      <unitPlacement unitType="russianInfantry" territory="Ukraine" quantity="3" owner="Russians"/>
-      <unitPlacement unitType="artillery" territory="Ukraine" quantity="1" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Vyborg" quantity="3" owner="Russians"/>
+      <unitPlacement unitType="infantry" territory="Ukraine" quantity="3" owner="Russians"/>
       <unitPlacement unitType="factory_minor" territory="Ukraine" quantity="1" owner="Russians"/>
       <unitPlacement unitType="cruiser" territory="115 Sea Zone" quantity="1" owner="Russians"/>
       <unitPlacement unitType="submarine" territory="115 Sea Zone" quantity="1" owner="Russians"/>
