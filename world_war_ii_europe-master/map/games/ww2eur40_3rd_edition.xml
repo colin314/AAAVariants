@@ -877,7 +877,7 @@
       <result resourceOrUnit="armour" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
-      <cost resource="PUs" quantity="6"/>
+      <cost resource="PUs" quantity="10"/>
       <result resourceOrUnit="fighter" quantity="1"/>
     </productionRule>
     <productionRule name="buyTactical_Bomber">
@@ -1500,7 +1500,7 @@
       <option name="transportCost" value="3"/>
       <option name="canBlitz" value="true"/>
       <option name="attack" value="6"/>
-      <option name="defense" value="6"/>
+      <option name="defense" value="5"/>
       <option name="isLandTransport" value="true"/>
       <option name="canBeGivenByTerritoryTo" value="British"/>
     </attachment>
@@ -1509,8 +1509,8 @@
       <option name="movement" value="4"/>
       <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
-      <option name="attack" value="4"/>
-      <option name="defense" value="6"/>
+      <option name="attack" value="6"/>
+      <option name="defense" value="8"/>
       <option name="canScramble" value="true"/>
       <option name="maxScrambleDistance" value="1"/>
       <option name="canIntercept" value="true"/>
