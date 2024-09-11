@@ -1297,7 +1297,7 @@
     <!-- Fighter -->
     <attachment name="unitAttachment" attachTo="fighter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="4"/>
-      <option name="carrierCost" value="2"/>
+      <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
       <option name="attack" value="4"/>
       <option name="defense" value="6"/>
@@ -1327,7 +1327,7 @@
     <!-- Tactical Bomber -->
     <attachment name="unitAttachment" attachTo="tactical_bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="4"/>
-      <option name="carrierCost" value="3"/>
+      <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
       <option name="attack" value="6"/>
       <option name="defense" value="6"/>
@@ -1388,7 +1388,7 @@
       <option name="isSea" value="true"/>
       <option name="attack" value="0"/>
       <option name="defense" value="4"/>
-      <option name="carrierCapacity" value="6"/>
+      <option name="carrierCapacity" value="2"/>
       <option name="hitPoints" value="2"/>
       <option name="blockade" value="0"/>
       <!-- whenCombatDamaged means that when this unit has x:y damage on it, it will have this effect -->
