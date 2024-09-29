@@ -1529,7 +1529,7 @@
       <option name="movement" value="1"/>
       <option name="transportCost" value="3"/>
       <option name="attack" value="3"/>
-      <option name="defense" value="3"/>
+      <option name="defense" value="4"/>
       <!--<option name="artillery" value="true"/>-->
       <option name="canBeGivenByTerritoryTo" value="British"/>
     </attachment>
@@ -1538,8 +1538,8 @@
       <option name="movement" value="2"/>
       <option name="transportCost" value="3"/>
       <option name="canBlitz" value="true"/>
-      <option name="attack" value="6"/>
-      <option name="defense" value="5"/>
+      <option name="attack" value="7"/>
+      <option name="defense" value="6"/>
       <option name="isLandTransport" value="true"/>
       <option name="canBeGivenByTerritoryTo" value="British"/>
     </attachment>
@@ -2338,7 +2338,7 @@
       <option name="faction" value="allied"/>
       <option name="side" value="offence"/>
       <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
+      <option name="bonus" value="2"/>
       <option name="number" value="1"/>
       <option name="bonusType" value="combined_arms"/>
       <option name="impArtTech" value="false"/>
@@ -2349,7 +2349,7 @@
       <option name="faction" value="allied"/>
       <option name="side" value="offence"/>
       <option name="dice" value="strength"/>
-      <option name="bonus" value="1"/>
+      <option name="bonus" value="2"/>
       <option name="number" value="1"/>
       <option name="bonusType" value="combined_arms"/>
       <option name="impArtTech" value="false"/>
