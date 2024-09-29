@@ -727,6 +727,7 @@
     <alliance player="Neutral_True" alliance="Neutral_True"/>
   </playerList>
   <unitList>
+    <unit name="conscript"/>
     <unit name="infantry"/>
     <unit name="artillery"/>
     <unit name="mech_infantry"/>
@@ -863,6 +864,10 @@
     <productionRule name="buyInfantry">
       <cost resource="PUs" quantity="3"/>
       <result resourceOrUnit="infantry" quantity="1"/>
+    </productionRule>
+    <productionRule name="buyConscript">
+      <cost resource="PUs" quantity="3"/>
+      <result resourceOrUnit="conscript" quantity="2"/>
     </productionRule>
     <productionRule name="buyMech_Infantry">
       <cost resource="PUs" quantity="4"/>
@@ -1128,6 +1133,28 @@
       <frontierRules name="buyAirfield"/>
       <frontierRules name="buyHarbour"/>
     </productionFrontier>
+    <productionFrontier name="russianProduction">
+      <frontierRules name="buyConscript"/>
+      <frontierRules name="buyInfantry"/>
+      <frontierRules name="buyMech_Infantry"/>
+      <frontierRules name="buyArtillery"/>
+      <frontierRules name="buyArmour"/>
+      <frontierRules name="buyFighter"/>
+      <frontierRules name="buyTactical_Bomber"/>
+      <frontierRules name="buyBomber"/>
+      <frontierRules name="buyTransport"/>
+      <frontierRules name="buySubmarine"/>
+      <frontierRules name="buyCarrier"/>
+      <frontierRules name="buyDestroyer"/>
+      <frontierRules name="buyCruiser"/>
+      <frontierRules name="buyBattleship"/>
+      <frontierRules name="buyAAGun"/>
+      <frontierRules name="buyFactory_Minor"/>
+      <frontierRules name="buyFactory_Upgrade"/>
+      <frontierRules name="buyFactory_Major"/>
+      <frontierRules name="buyAirfield"/>
+      <frontierRules name="buyHarbour"/>
+    </productionFrontier>
     <!--<productionFrontier name="productionIndustrialTechnology">
                         <frontierRules name="buyInfantryIndustrialTechnology"/>
                         <frontierRules name="buyMech_InfantryIndustrialTechnology"/>
@@ -1161,7 +1188,7 @@
     <playerProduction player="French" frontier="production"/>
     <playerProduction player="Germans" frontier="production"/>
     <playerProduction player="Italians" frontier="production"/>
-    <playerProduction player="Russians" frontier="production"/>
+    <playerProduction player="Russians" frontier="russianProduction"/>
     <playerRepair player="Americans" frontier="repair"/>
     <playerRepair player="British" frontier="repair"/>
     <playerRepair player="French" frontier="repair"/>
@@ -1463,6 +1490,18 @@
       <option name="warBonds" value="false"/>
     </attachment>
     <!-- Unit Attachments -->
+    <!-- Conscript -->
+    <attachment name="unitAttachment" attachTo="conscript" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+      <option name="movement" value="1"/>
+      <option name="transportCost" value="2"/>
+      <option name="isLandTransportable" value="true"/>
+      <option name="attack" value="0"/>
+      <option name="defense" value="0"/>
+      <!--<option name="artillerySupportable" value="true"/>-->
+      <option name="isAirTransportable" value="true"/>
+      <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians"/>
+      <option name="canBeGivenByTerritoryTo" value="British"/>
+    </attachment>
     <!-- Infantry -->
     <attachment name="unitAttachment" attachTo="infantry" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="1"/>
