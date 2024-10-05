@@ -1575,8 +1575,8 @@
     <attachment name="unitAttachment" attachTo="cruiser" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
       <option name="movement" value="2"/>
       <option name="isSea" value="true"/>
-      <option name="attack" value="6"/>
-      <option name="defense" value="6"/>
+      <option name="attack" value="7"/>
+      <option name="defense" value="7"/>
       <option name="canBombard" value="true"/>
       <option name="hitPoints" value="1"/>
       <option name="blockade" value="1"/>
