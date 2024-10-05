@@ -1509,8 +1509,8 @@
       <option name="movement" value="4"/>
       <option name="carrierCost" value="1"/>
       <option name="isAir" value="true"/>
-      <option name="attack" value="6"/>
-      <option name="defense" value="8"/>
+      <option name="attack" value="4"/>
+      <option name="defense" value="6"/>
       <option name="canScramble" value="true"/>
       <option name="maxScrambleDistance" value="1"/>
       <option name="canIntercept" value="true"/>
