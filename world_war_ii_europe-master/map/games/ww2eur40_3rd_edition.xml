@@ -877,7 +877,7 @@
       <result resourceOrUnit="armour" quantity="1"/>
     </productionRule>
     <productionRule name="buyFighter">
-      <cost resource="PUs" quantity="10"/>
+      <cost resource="PUs" quantity="6"/>
       <result resourceOrUnit="fighter" quantity="1"/>
     </productionRule>
     <productionRule name="buyTactical_Bomber">
