@@ -1529,7 +1529,7 @@
       <option name="movement" value="1"/>
       <option name="transportCost" value="3"/>
       <option name="attack" value="3"/>
-      <option name="defense" value="3"/>
+      <option name="defense" value="4"/>
       <!--<option name="artillery" value="true"/>-->
       <option name="canBeGivenByTerritoryTo" value="British"/>
     </attachment>
