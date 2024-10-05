@@ -1469,7 +1469,7 @@
       <option name="transportCost" value="2"/>
       <option name="isLandTransportable" value="true"/>
       <option name="attack" value="2"/>
-      <option name="defense" value="4"/>
+      <option name="defense" value="3"/>
       <!--<option name="artillerySupportable" value="true"/>-->
       <option name="isAirTransportable" value="true"/>
       <option name="canBeCapturedOnEnteringBy" value="French:Americans:British:Russians:Germans:Italians"/>
@@ -1480,7 +1480,7 @@
       <option name="movement" value="2"/>
       <option name="transportCost" value="3"/>
       <option name="attack" value="2"/>
-      <option name="defense" value="4"/>
+      <option name="defense" value="3"/>
       <!--<option name="artillerySupportable" value="true"/>-->
       <option name="receivesAbilityWhenWith" value="canBlitz:armour"/>
       <option name="canBeGivenByTerritoryTo" value="British"/>
